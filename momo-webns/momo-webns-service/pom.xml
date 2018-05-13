@@ -1,0 +1,46 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.momo</groupId>
+    <artifactId>momo-webns</artifactId>
+    <version>1.0.0-RELEASE</version>
+  </parent>
+  <artifactId>momo-webns-service</artifactId>
+  
+  
+      <dependencies>
+      
+      <dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring-core</artifactId>
+    	<version>${org.springframework-version}</version>
+	 </dependency>
+      
+   
+		<dependency>
+		    <groupId>org.springframework.security</groupId>
+		    <artifactId>spring-security-core</artifactId>
+		    <version>5.0.4.RELEASE</version>
+		</dependency>
+        <dependency>
+			<groupId>com.momo</groupId>
+			<artifactId>momo-webns-service-api</artifactId>
+			<version>1.0.0-RELEASE</version>
+		</dependency>
+		
+		  <dependency>
+        <groupId>com.h2database</groupId>
+        <artifactId>h2</artifactId>
+        <version>1.3.156</version>
+    </dependency>
+		
+        <dependency>
+			<groupId>com.momo</groupId>
+			<artifactId>momo-webns-persistence</artifactId>
+			<version>1.0.0-RELEASE</version>
+		</dependency>
+		
+    
+     
+    </dependencies>
+</project>

@@ -1,0 +1,172 @@
+/*********************************************** 20180403 webns模組化 by zhlin ************************************************/
+
+$(function(){ 
+/*********************************************** 共用 ************************************************/
+  
+/** .Tabmenu切換頁籤功能 **/
+var tabTitle = ".column .Tabmenu ul li";
+var tabContent = ".content .box .inner .TabContent .TabContentD";
+$(tabTitle + ":first").addClass("selected");
+$(tabContent).not(":first").hide();
+$(tabTitle).unbind("click").bind("click", function(){
+  $(this).siblings("li").removeClass("selected").end().addClass("selected");
+  var index = $(tabTitle).index($(this));
+  $(tabContent).eq(index).siblings(tabContent).hide().end().show();
+});
+  
+/** 常用程式集**/	
+$(".commonPrograms").delegate("dt","click",function(){
+  $(this).parents(".commonPrograms").toggleClass("opencommonPrograms");
+});
+});
+
+/** 彈出視窗時的黑透明背景 **/
+function bkArea() {
+  $('body').append('<div class="fancybox-overlay"></div>');
+  //控制body移除卷軸
+  $('body,html').css({'width':'100%','height':'100%','overflow':'hidden'});
+  $('.fancybox-overlay,.popup h2 a.closeBtn').click(function() {
+    $('.fancybox-overlay').remove();
+    //關閉所有浮層，將body卷軸復原
+    $('body,html,.popup').removeAttr('style');
+  });
+}
+
+/*********************************************** 共用 ************************************************/
+
+/** 20160308_index_公告浮層**/
+function index() {
+		$(".content .box .news ul li ").delegate("a","click",function(){
+			bkArea();
+			$(".newsItem").css({"left":($("html")[0].clientWidth/2)-($(".newsItem").width()/2),"top":($("html")[0].clientHeight/2)-($(".newsItem").height()/2)}).show();	
+			});
+		$(".newsItem h2, .newsItem .closeBtnitem").delegate(".closebox, button","click",function(){
+			$(".newsItem, .fancybox-overlay").removeAttr("style");
+		  });
+		}
+
+/** function login **/
+function login() {
+	$(".mainarea").delegate(".rePasswordBtn","click",function(){
+		bkArea();
+		$(".passwordfile").css({"left":($("html")[0].clientWidth/2)-($(".passwordfile").width()/2),"top":($("html")[0].clientHeight/2)-($(".passwordfile").height()/2)}).show();	
+		$(".passwordfile h2, .passwordfile .confirmBtn").delegate("a,button","click",function(){
+			$(".passwordfile, .fancybox-overlay").hide();
+		});
+	});
+}
+
+/** function a101 **/
+function a101() {
+	fixedTitle(362);
+	$(".box").delegate(".addBtn, .editiconBtn","click",function(){
+		bkArea();
+		$(".addfile").css({"left":($("html")[0].clientWidth/2)-($(".addfile").width()/2),"top":($("html")[0].clientHeight/2)-($(".addfile").height()/2)}).show();	
+		$(".addfile h2, .addfile .confirmBtn").delegate("a,button","click",function(){
+			$(".addfile, .fancybox-overlay").hide();
+		});
+	});
+
+	var tabTitle = ".addfile .Tabmenu ul li";
+	var tabContent = ".checkArea .TabContent .TabContentD";
+	$(tabTitle + ":first").addClass("selected");
+	$(tabContent).not(":first").hide();
+	$(tabTitle).unbind("click").bind("click", function(){
+			$(this).siblings("li").removeClass("selected").end().addClass("selected");
+			var index = $(tabTitle).index($(this));
+			$(tabContent).eq(index).siblings(tabContent).hide().end().show();
+			$(".addfile").css({"left":($("html")[0].clientWidth/2)-($(".addfile").width()/2)})/** 點選每個頁籤崇先計算寬度 **/
+			a101shopfixedTitle(382);		
+	});
+	
+}
+
+/** function m10301 **/
+function m10301() {
+  //m10301左側商品列表展開/收合
+  $('.m10301style .content .left .column').click(function () {
+    $('.m10301style .content .box.left, .m10301style .content .box.right').toggleClass('close');
+  });
+  
+  //m10301測試鍵盤F2觸發事件
+  document.onkeydown = function(event) {
+    var e = event || window.event || argument.callee.caller.arguments[0];
+    if (e && e.keyCode==117) {
+      bkArea();
+      $(".f6PrdStockBox").show();
+    }
+  }
+  
+  //m10301點選審議資料
+  $('.m10301style .content .box .column a.showCommit').click(function() {
+    bkArea();
+    $('.m10301CommitBox').show();
+  });
+  $('.m10301CommitBox h2 a.closeBtn').click(function() {
+    $('.m10301CommitBox').removeAttr('style');
+    $('.fancybox-overlay').remove();
+  });
+  
+  //m10301點選憑證及來源資料
+  $('.m10301style .content .box .column a.showCertificate').click(function() {
+    bkArea();
+    $('.m10301CertificateBox').show();
+  });
+  $('.m10301CertificateBox h2 a.closeBtn').click(function() {
+    $('.m10301CertificateBox').removeAttr('style');
+    $('.fancybox-overlay').remove();
+  });
+  
+  //m10304點選規格書複製
+  $('.m10301style .content .box .column a.editCopy').click(function() {
+    bkArea();
+    $('.m10304EditCopyBox').show();
+  });
+  $('.m10304EditCopyBox h2 a.closeBtn').click(function() {
+    $('.m10304EditCopyBox').removeAttr('style');
+    $('.fancybox-overlay').remove();
+  });
+  
+  //m10304預覽列印
+  $('.m10301style .content .box .inner ul li.buttonArea .showPrint').click(function() {
+    bkArea();
+    $('.m10304PrintBox').show();
+  });
+  $('.m10304PrintBox h2 a.closeBtn').click(function() {
+    $('.m10304PrintBox').removeAttr('style');
+    $('.fancybox-overlay').remove();
+  });
+  
+  
+}
+
+
+/** function m50202 **/
+function m502() {
+  //m50202點擊服務紀錄加上已選取樣式
+  $('.m50202style .content .box.left table').click(function() {
+    $('.m50202style .content .box.left table').removeClass('selected');
+    $(this).addClass('selected');
+  });
+  //m50202點擊批次處理顯示回覆區塊
+  $('.m50202style .content .box .column a.showReply').click(function() {
+    $('.m50202style .content .box.right .inner .reply').show();
+  });
+  
+  //m50211搜尋條件收合
+  $('.m50202style .content .box .column a.more').click(function() {
+    $('.m50202style .content .box .inner ul.filter').toggle();
+    $(this).toggleClass('selected');
+  });
+  //m50211點擊派件顯示負責人浮層
+  $('.m50202style .content .box .column a.showCharge').click(function() {
+    bkArea();
+    $('.m50211InchargeBox').show();
+  });
+  $('.m50211InchargeBox h2 a.closeBtn').click(function() {
+    $('.m50211InchargeBox').removeAttr('style');
+    $('.fancybox-overlay').remove();
+  });
+}
+
+

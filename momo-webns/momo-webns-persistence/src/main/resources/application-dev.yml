@@ -1,0 +1,14 @@
+app:
+  datasource:
+    primary:
+      driver-class-name: oracle.jdbc.OracleDriver
+      url: jdbc:oracle:thin:@momodb2.c6oaimeo148k.ap-northeast-1.rds.amazonaws.com:1521:ORCL
+      username: FUBON
+      password: "Fubon"
+      hikari:
+        connection-test-query: SELECT 1 FROM DUAL
+        minimum-idle: 1
+        maximum-pool-size: 5
+        pool-name: WEBNS-PRIMARY
+        max-lifetime: 1800000
+        idle-timeout: 900000   #Driver does not support get/set network timeout for connections.

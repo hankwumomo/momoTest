@@ -1,0 +1,359 @@
+/***** CI 色碼 #6cb6a6 **/
+/** 查詢按鈕                : <button class="check">查詢</button> **/
+/** column裡的連結按鈕      : <a class="btn">按鈕名稱</a> **/
+/** column裡的頁籤 div name : div.content > div.box > div.column > ul > li**/
+/** 共用區塊名稱             : div.content > div.box **/
+
+
+body{background:none repeat scroll 0 0 #EFEFEF; margin:0px; padding:0px;}
+
+/** 登入畫面 **/
+.loginbody {margin:0px; padding:0px; background:#292830; }
+.wrapbg {height:600px; background:url(../img/bg.png) repeat; margin:0 auto;}
+.wrapbg .wrapper {width:390px;  margin:0 auto;}
+.wrapbg .wrapper .tittle {width:325px; height:40px; display:inline-block; background: url(../img/logo_tittle.png) no-repeat; margin-top:100px; margin-left:30px;}
+.wrapbg .wrapper .content {width:390px; display:inline-block; background:url(../img/contentbg.png) repeat;  border-radius:15px; margin-top:5px; padding:0px 0px 15px 0px; position:relative;}
+.wrapbg .wrapper .content img { position:absolute; top:12px; left:40px;}
+.wrapbg .wrapper .content .mainarea {width:360px; height:auto; display:inline-block; background:url(../img/mainbg.png) repeat-y; border-radius:16px; margin:15px 15px 0px 15px; }
+.wrapbg .wrapper .content .mainarea dl { margin:65px 0 45px; padding:0px; width:360px;}
+.wrapbg .wrapper .content .mainarea dl dd { margin:0px; padding:0px; width:250px; height:32px; display:inline-block; background:#FFF; border:1px #727176 solid ;border-radius:4px; margin-left:50px;}
+.wrapbg .wrapper .content .mainarea dl .password,
+.wrapbg .wrapper .content .mainarea dl .newPw { margin-top:8px;}
+.wrapbg .wrapper .content .mainarea dl .newPw { display:none}
+.wrapbg .wrapper .content .mainarea dl .username b,
+.wrapbg .wrapper .content .mainarea dl .password b{ width:40px; height:32px; display:inline-block; background:#DFDFDD url(../img/number.png) no-repeat 8px 6px; border-right:1px #727176 solid; border-radius:4px 0px 0px 4px; float:left; }
+.wrapbg .wrapper .content .mainarea dl .password b{ background:#DFDFDD url(../img/key.png) no-repeat 8px 6px;}
+.wrapbg .wrapper .content .mainarea dl .username input,
+.wrapbg .wrapper .content .mainarea dl .password input,
+.wrapbg .wrapper .content .mainarea dl .newPw input {width:200px; height:30px; display: inline-block; border:0px; font:13px/30px Verdana; color:#2F2E39; margin-left:5px; }
+.wrapbg .wrapper .content .mainarea dl dt { margin-left:50px; margin-top:10px;}
+.wrapbg .wrapper .content .mainarea dl dt span { margin-right:10px}
+.wrapbg .wrapper .content .mainarea dl dt span a { display:inline-block;  font:13px/21px 微軟正黑體,Verdana; color:#66646F;text-decoration:underline; cursor:pointer;}
+.wrapbg .wrapper .content .mainarea dl dt span a:hover {color:#CCC;}
+.wrapbg .wrapper .content .mainarea dl .loginbtn { margin-left:20px;}
+.wrapbg .wrapper .content .mainarea dl .loginbtn a { width:86px; height:26px; display:inline-block; background:url(../img/lobtn.png) repeat-x; border:1px #F07E1C solid; font:bold 13px/26px Verdana; color:#FFFFFF; text-align:center; text-decoration:none; border-radius:4px; cursor:pointer;}
+.wrapbg .wrapper .content .mainarea dl .loginbtn a:hover {width:86px; height:26px; display:inline-block; background:url(../img/lobtn_hover.png) repeat-x; border:1px #D84174 solid; color:#DFF9F8; }
+
+/** 登入畫面- 忘記密碼 **/
+.passwordfile {width:380px;background-color:#FFFFFF; border-radius:10px; padding:10px 10px; position:absolute; top:0px; left:0px; z-index:2007; display:none; border:12px #CCCCCC solid}
+.passwordfile h2{margin:0px; padding-left:15px; font:bold 15px/30px Helvetica; color:#313131; border-bottom:1px #313131 dashed;  position:relative; }
+.passwordfile h2 a {width:36px; height:20px; display:inline-block; background:#312F3A url(../img/closebox.png) no-repeat; border-radius:4px; font:13px/16px Helvetica; color:#FFFFFF; text-align:center; text-decoration:none; position:absolute; right:0px; top:2px; #top:-5px; padding:2px 0px 0px 14px; #padding:4px 0px 0px 14px;cursor:pointer}
+:root .passwordfile h2 a {padding-top:4px\9; }
+.passwordfile .loginpassArea {background:#FFFFFF; font:13px/26px Helvetica; color:#505050; padding:20px 20px; }
+.passwordfile .memberAD {margin:0px; padding:0px;list-style:none;}
+.passwordfile .memberAD li{font:13px/26px Helvetica;color:#505050; margin:5px 0px;}
+.passwordfile .memberAD li b{ display:inline-block; width:60px; font:bold 13px/26px Verdana;color:#505050;}
+.passwordfile .memberAD li i{font:13px/26px Helvetica;color:#C1C1C1; margin-left:5px;}
+.passwordfile .memberAD li input{width:150px; height:20px; border:1px #727176 solid;  font:13px/20px Helvetica;color:#505050;padding-left:2px}
+.passwordfile .confirmBtn {text-align: center; margin-top:5px;}
+.passwordfile .confirmBtn button {width:70px; height:26px; display:inline-block; background: url(../img/iconpx.png) repeat-x; border:1px #818386 solid; border-radius:4px; font:13px/22px Helvetica; color:#FFFFFF; cursor:pointer; margin-right:10px;}
+.passwordfile .confirmBtn button:hover {color:#FFFFFF; background:url(../img/lobtn.png) repeat-x; border:1px #F07E1C solid;}
+
+/**首頁**/
+.header{margin:0 auto;}
+.header .topwrap{background-color:#FFFFFF; height:48px; border-bottom:1px solid #DDDBDE; margin:0 auto;}
+.header .topwrap .top{ width:100%; height:48px; margin:0 auto; padding:0 10px; box-sizing:border-box; background:url(../img/logo_webns.png) no-repeat 5px; position:relative;}
+.header .topwrap .top  dl{ height:30px; display:inline-block; position:absolute; margin:0px; padding:0px; top:10px; right:2px;  }
+.header .topwrap .top  dl dt {float:left; font:12px/32px Helvetica; color:#F93; margin-right:26px; text-align:center;}
+.header .topwrap .top  dl dt span { margin-left:10px}
+.header .topwrap .top  dl dd{float:left; margin:0px; padding:0px; margin-right:20px; width:30px; height:30px; background-color:#999; border-radius:15px; text-align:center; }
+.header .topwrap .top  dl dd a{width:30px; height:30px; display:inline-block;}
+.header .topwrap .top  dl dd a:hover{ width:30px; height:30px; display:inline-block; background:transparent url(../img/iconhoverpx.png) repeat-x  ; border-radius:15px;text-align:center; }
+.fixedText { position:fixed; right:5px; bottom:5px; display:inline-block; padding:5px 10px; background:rgba(0,0,0,0.7); font:13px/22px Helvetica; color:#FFF; z-index:4}
+
+/**第一層選單**/	
+.header .mainmenu { width:100%; height:36px; margin:0 auto; padding:0 10px; box-sizing:border-box}
+.header .mainmenu ul{margin:0px; padding:0px;}
+.header .mainmenu ul li{ float:left; list-style-type:none; font:bold 15px/32px Helvetica; color:#CCCCCC; text-align:center}
+.header .mainmenu ul li + li { margin-left:4px}
+.header .mainmenu ul li a {width:118px; height:36px; display:block; background:#DFDFDD; display:inline-block; color:#C1C1C1; text-decoration:none; position:relative}
+.header .mainmenu ul li a:hover{color:#797474;}
+.header .mainmenu ul li a span { width:32px; height:10px; position:absolute; z-index:2; bottom:-12px; left:2px; display:none}
+.header .mainmenu ul .selected a {color:#FFFFFF; background-color:#101318; line-height:34px}
+.header .mainmenu ul .selected a span {display:inline-block}
+
+/**第二層選單**/
+.header .subnavwrap{ height:40px; background-color:#FFFFFF; border-top:2px solid #6cb6a6; position:relative; z-index:1}
+.header .subnavwrap .subnav{ width:100%; height:24px; margin:8px auto; padding:0 10px; box-sizing:border-box; background-color:#FFFFFF;} 
+.header .subnavwrap .subnav ul{margin:0px; padding:0px}
+.header .subnavwrap .subnav ul li{ float:left; position:relative; margin-right:10px; list-style-type:none; font:bold 15px/24px Helvetica; text-align:center}
+.header .subnavwrap .subnav ul li:first-child{margin-left:0px}
+:root .header .subnavwrap .subnav ul li a {line-height:40px\9}
+.header .subnavwrap .subnav ul li a { color:#525963; text-decoration:none}
+.header .subnavwrap .subnav ul li a.topMenu { padding:0 10px; box-sizing:border-box; height:24px; border:1px solid #6cb6a6; font:13px/22px Heltivaca; display:inline-block; cursor:pointer}
+.header .subnavwrap .subnav ul li .bottomnav { display:none} 
+.header .subnavwrap .subnav ul li:hover .bottomnav { display:block; position:absolute; left:0; top:25px; margin:0px; padding:0px; width:auto; border:1px solid #6cb6a6; border-top-style:dashed}
+.header .subnavwrap .subnav ul li:hover a.topMenu { background-color:#6cb6a6; border-bottom:0; color:#FFF}
+.header .subnavwrap .subnav ul li:hover a.topMenu span { float: right; margin-left:5px; display: inline-block; border-bottom: 2px #D6D6D6 solid;}
+.header .subnavwrap .subnav .bottomnav dt a span {display:none}
+.header .subnavwrap .subnav .bottomnav:hover a span,
+.header .subnavwrap .subnav .bottomnav:hover dd {display:inline-block}
+.header .subnavwrap .subnav .bottomnav dt{width:160px; height:38px; color:#34353A;}
+.header .subnavwrap .subnav .bottomnav dt span{float:right; width:42px; height:36px; display:inline-block; background:#DFDFDF url(../img/arrow.png) no-repeat 16px;; border-bottom:2px #D6D6D6 solid;}
+
+/**第二層選單-下拉**/
+.header .subnavwrap .subnav .bottomnav dd { margin:0 auto;}
+.header .subnavwrap .subnav .bottomnav dd a {float:left; width:200px; height:30px; background-color:#DFDFDF; font:13px/30px Helvetica; margin:0px; padding:0px; border-bottom:1px solid #F1F1F1; text-align:left; padding-left:5px; overflow:hidden} 
+.header .subnavwrap .subnav .bottomnav dd a:hover{ display:block; height:30px; background-color:#34353A; font:13px/30px Helvetica; color:#FFFFFF; }
+
+/**nav**/
+.nav{ width:100%; height:40px; margin:0 auto; padding:0 10px; box-sizing:border-box; font-size:12px; color:#84878C;} 
+.nav dl{height:40px; margin:0px; padding:0px;} 
+.nav dl dt,
+.nav dl dd { float:left; position:relative; height:40px; font:13px/40px Helvetica; margin:0px; padding:0px}
+.nav dl dt { padding-left:24px; background: transparent url(../img/click.png) no-repeat 0px 10px; font-weight:bold; color:#6cb6a6}
+.nav dl dd::before { position:absolute; top:18px; left:0; display:inline-block; width:100%; height:4px; background-color:#dddddd; z-index:-1; content:""}
+.homeBody .nav dl dd {background:none}
+.nav dl dd a { position:relative; padding:0px 100px 0px 23px; display:inline-block; color:#84878C; text-decoration:none}
+.nav dl dd a::before { position:absolute; top:14px; left:0; display:inline-block; width:12px; height:12px; background-color:#cdcdcd; border-radius:10px; content:""}
+.nav dl dd:first-child a { background:transparent url(../img/home.png) no-repeat 0px 9px; color:#498ADA}
+.nav dl dd:first-child a::before { display:none}
+
+/**常用程式集**/
+.header .mainmenu {position:relative}
+.commonPrograms {background-color:#FFFFFF; margin:0px; border:1px solid #6cb6a6; position:absolute; top:45px; right:0px; z-index:2}
+.commonPrograms dl {margin:0px; padding:0px}
+.commonPrograms dt {background-color:#6cb6a6; height:24px; font:12px/24px Helvetica; color:#FFFFFF; padding:0px 10px; cursor:pointer}
+.commonPrograms dt span {float:right; font:24px/24px Helvetica; display:none}
+.commonPrograms dd {margin:0px; padding:0px; border-top:1px dashed #CCCCCC; display:none}
+.commonPrograms dd:first-child {border:0px}
+.commonPrograms dd a {height:29px; font:12px/29px Helvetica; color:#525963; padding:0px 15px; display:block; text-decoration:none}
+.header .mainmenu .opencommonPrograms dt span {display:inline-block}
+.header .mainmenu .opencommonPrograms dd {display:block}
+
+/**共用區塊 - 內容**/
+.content {width:100%; margin:0 auto; padding:0 10px; box-sizing:border-box}
+.content .box { margin:0 auto 10px; background-color:#FFFFFF; border:1px #6cb6a6 solid; box-shadow:0px 2px 2px #B9BABE; box-sizing:border-box}
+.content .box.left { float:left; margin-right:1%}
+.content .box.right { float:left}
+.content .box .column { height:30px; background-color:#6cb6a6; font:bold 15px/30px Helvetica; color:#FFFFFF; padding:0px 12px; position:relative; overflow-y:hidden; overflow-x:auto}
+.content .box .column a.btn { float:right; display:inline-block; padding:0 10px; height:20px; background:#6C7486; border-bottom:3px #52555A solid; list-style-type:none; font:13px/20px Helvetica; color:#FFFFFF; margin:3px 0px 3px 5px; text-align:center; text-decoration:none; cursor: pointer}
+.content .box .column a.btn:hover { display:inline-block; background:#A5A6AD; border-bottom:3px #848A9C solid;}
+.content .box .inner { position:relative; margin:10px; font:13px/26px Helvetica;color:#505050; overflow:hidden}
+.content .box .inner p { font:12px/20px Helvetica; color:#797979;}
+.content .box .inner ul {margin:0px; padding:0px; display:inline-block; width:100%; list-style: none outside none;}
+.content .box .inner ul li{float:left; margin:0px 20px 5px 0px; }
+.content .box .inner a.btn { display:inline-block; margin-right:10px; padding:0 10px; height:24px; background-color:#6cb6a6; font:13px/24px Helvetica; color:#FFFFFF; text-align:center; text-decoration:none}
+.content .box .inner a.btn:hover { display:inline-block; background:#A5A6AD}
+.content .box .inner .midline { width:100%; height:4px; border-bottom:1px #6cb6a6 dashed; margin-bottom:8px}
+.content .box .inner .TabContent .TabContentD { overflow:auto}
+.content .box .inner .insidebox { margin:10px 0; border:1px solid #D3D3D3}
+.content .box .inner .insidebox .column {background-color:#D3D3D3; color:#333333}
+.content .box .inner .insidebox table { margin:0}
+
+/**共用區塊-表單**/ 
+.content .box .inner ul .noleft {clear:both;}
+.content .box .inner ul li select,
+.content .box .inner ul li select option{ margin-right:5px; font:13px/26px Helvetica}
+.content .box .inner ul li.buttonArea { display:block; margin:0; width:100%; text-align:right}
+.content .box .inner ul li.buttonArea .check { margin-left:10px; color:rgb(0, 0, 0); font:13px/20px Helvetica;}
+.content .box .inner input[type=text] { margin:2px 5px 2px 2px; vertical-align:middle}
+.content .box .inner label { cursor:pointer}
+.content .box .inner label input[type=checkbox] { position:relative; top:3px}
+
+/**共用區塊-表格**/ 
+table { display:inline-table; margin:10px 0; border-right:1px solid #C1C1C1; border-top:1px solid #C1C1C1;}
+table tr:nth-child(2n+1) { background-color:#E9E9E9}
+table th { background-color:#D3D3D3; height:30px; border-left:1px solid #C1C1C1; font:bold 13px/30px Helvetica; color:#000000; border-bottom:1px solid #C1C1C1; padding:0 5px; white-space:nowrap;}
+table td {border-left:1px solid #C1C1C1; border-bottom:1px solid #C1C1C1; font:13px/20px Helvetica; text-align:center; padding:5px;}
+table td.alignLeft { text-align:left}
+table .odd {background-color:#E9E9E9}
+table .add {background:#FFEDF5;}
+table a {display:inline-block; font:13px/20px Helvetica; color:#498ADA; text-align:center; text-decoration:underline;cursor:pointer}
+table a:hover{color:#5D9BE5;}
+table .checkBtn {width:18px; height:18px; display:inline-block; background:#8B8E90 url(../img/checkbtn.png) no-repeat; border-radius:8px;}
+table .checkBtn:hover{ background:#1F242E url(../img/checkbtnhover.png) no-repeat; border-radius:8px;}
+
+/**共用區塊-頁籤**/ 
+.column .Tabmenu { display:block}
+.column .Tabmenu ul { margin:0px; padding:0px;}
+.column .Tabmenu ul li { display:inline-block; list-style-type:none;}
+.column .Tabmenu ul li a { padding:0 10px; height:26px; display:inline-block; background:#6cb6a6;font:13px/25px Helvetica; color:#FFF5FA; text-align:center; border:0px; border-radius:0px; cursor:pointer; }
+.column .Tabmenu ul li a:hover{ background:#FFF; color:#000}
+.column .Tabmenu ul .selected a { height:27px; display:inline-block; background:#FFFFFF; font: bold 13px/25px Helvetica; color:#101318; border-top:2px #C6C6C6 solid;}
+
+/**footer**/
+.footer { background:#efefef ;text-align:center; clear:both; height:80px}
+.footer span{ margin:22px 0; background:transparent url(../img/momofooter.png) no-repeat 10px; height:36px; font:12px/19px Helvetica; color:#878787; padding:0px 0px 0px 70px; display:inline-block}
+
+/** 共用區塊-浮層 **/
+.fancybox-overlay { display:block; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:2}
+.popup { display:none; position:fixed; top:0; right:0; bottom:0; left:0; margin:auto; width:980px; height:700px; color:#000; background-color:#DFDFDD; padding:5px 10px 10px; overflow-y:auto; z-index:3}
+.popup h2{ font:bold 15px/30px Helvetica; color:#34383F; margin:0px; position:relative; }
+.popup h2 a { height:24px; display:inline-block; background:#555; font:13px/23px Helvetica; color:#FFFFFF; text-align:center; text-decoration:none; position:absolute; right:0px; top:0; padding:0 10px; cursor:pointer}
+.popup .content { position:relative; display:block; width:100%; height:calc(100% - 30px); background:#ffffff; overflow:hidden}
+.popup .content .contWrap { padding:0 5px; box-sizing:border-box; height:100%; overflow-y:auto}
+.popup .content ul li {float:left; margin:0px 0px 0px 5px}
+.popup .content ul li b{font:bold 13px/26px Helvetica;}
+.popup .content .buttonArea { position:absolute; bottom:-10px; left:0; display:inline-block; padding:13px 0; box-sizing:border-box; width:100%; height:50px; background-color:#DFDFDD; text-align:center}
+.popup .content .buttonArea a { height:24px; display:inline-block; background:#555; font:13px/23px Helvetica; color:#FFFFFF; text-align:center; text-decoration:none; margin:0 10px; padding:0 10px; cursor:pointer}
+.popup .content .contWrap .insidebox { margin:10px 0; border:1px solid #D3D3D3}
+.popup .content .contWrap .insidebox .column { position:relative; height:30px; background-color:#D3D3D3; color:#333; font:bold 15px/30px Helvetica; padding:0px 12px; overflow-y:hidden}
+.popup .content .contWrap .insidebox .inner { position:relative; margin:10px; font:13px/26px Helvetica;color:#505050; overflow:hidden}
+
+
+/** 共用區塊-浮層 F6商品庫存 **/
+.f6PrdStockBox .content h3 { margin:0; padding:10px 10px 0; font:13px/24px Helvetica}
+.f6PrdStockBox .content h3 span { color:#498ADA}
+.f6PrdStockBox .content h3 a { float:right; height:24px; background:#555; font:13px/23px Helvetica; color:#FFFFFF; text-align:center; text-decoration:none; margin:3px 0; padding:0 10px; cursor:pointer}
+.f6PrdStockBox .content .contWrap { height:calc(100% - 74px)}
+.f6PrdStockBox .content .contWrap table tr th { position:sticky; position:-webkit-sticky; top:0; left:0}
+.f6PrdStockBox .content .contWrap table tr td { background-color:#FFF}
+.f6PrdStockBox .content .contWrap table tr td textarea { resize:none}
+.f6PrdStockBox .content .contWrap table tr td label { margin-right:5px}
+.f6PrdStockBox .content .contWrap table tr td label input[type=checkbox] { position:relative; top:3px}
+
+/**  共用區塊-填寫區塊**/
+.colorbox .colorboxArea .textBox b {line-height:18px; display:inline-block; position:relative; top:-45px; }
+.colorbox .colorboxArea ul .textBox textarea{ width:500px;font:13px/18px Helvetica;color:#000000; margin-bottom:5px; resize:none;}
+
+/**  共用區塊-卷軸樣式(chrome)**/
+::-webkit-scrollbar { margin:5px 5px 0 0; width:5px; height:5px}
+::-webkit-scrollbar-thumb { border-radius:5px; -webkit-box-shadow:inset 0 0 12px #797979}
+::-webkit-scrollbar-track { -webkit-box-shadow:inset 0 0 12px #CCC; border-radius:5px}
+
+/*********************************************************************  m10301 *********************************************************************/
+.m10301style .content .box .column { cursor:pointer}
+.m10301style .content .box .inner { overflow:auto}
+.m10301style .content .box.left { width:29%}
+.m10301style .content .box.right { width:70%}
+.m10301style .content .box.left.close { width:9%}
+.m10301style .content .box.right.close { width:90%}
+.m10301style .content .box.left .inner { max-height:550px; overflow:auto}
+.m10301style .content .box.left .inner table th { position:sticky; position:-webkit-sticky; top:0; left:0}
+.m10301style .content .box.left .inner table td { white-space:nowrap}
+.m10301style .content .box .inner .insidebox table.mergeTB tr { background-color:#FFF}
+.m10301style .content .box .inner .insidebox table.mergeTB tr:nth-child(4n+1),
+.m10301style .content .box .inner .insidebox table.mergeTB tr:nth-child(4n+2) { background-color:#E9E9E9}
+.m10301style .column .Tabmenu { white-space:nowrap; /**overflow-y:auto**/}
+.m10301style .content .box .inner textarea { margin:0 5px 0 2px; width:500px; height:100px; vertical-align:text-top; resize:none}
+
+/** 審議資料浮層 **/
+.m10301CommitBox .content h3 { margin:0; padding:10px 10px 0; font:13px/24px Helvetica}
+.m10301CommitBox .content h3 span { color:#498ADA}
+.m10301CommitBox .content h3 a { float:right; height:24px; background:#555; font:13px/23px Helvetica; color:#FFFFFF; text-align:center; text-decoration:none; margin:3px 0; padding:0 10px; cursor:pointer}
+.m10301CommitBox .content .contWrap { height:calc(100% - 74px)}
+.m10301CommitBox .content .contWrap table tr th { position:sticky; position:-webkit-sticky; top:0; left:0}
+.m10301CommitBox .content .contWrap table tr td { background-color:#FFF}
+.m10301CommitBox .content .contWrap table tr td textarea { resize:none}
+.m10301CommitBox .content .contWrap table tr td label { margin-right:5px}
+.m10301CommitBox .content .contWrap table tr td label input[type=checkbox] { position:relative; top:3px}
+
+/** 憑證及來源浮層 **/
+.m10301CertificateBox .content h3 { margin:0; padding:10px 10px 0; font:13px/24px Helvetica}
+.m10301CertificateBox .content h3 span { margin-right:5px; color:#498ADA}
+.m10301CertificateBox .content .contWrap .insidebox { margin:10px 0; border:1px solid #D3D3D3}
+.m10301CertificateBox .content .contWrap .insidebox .column { position:relative; height:30px; background-color:#D3D3D3; color:#333; font:bold 15px/30px Helvetica; padding:0px 12px; overflow-y:hidden}
+.m10301CertificateBox .content .contWrap .insidebox .inner { position:relative; margin:10px; font:13px/26px Helvetica;color:#505050; overflow:hidden}
+
+/** 圖書資訊浮層 **/
+.m10301BookBox { width:700px; height:500px}
+.m10301BookBox .content h3 { margin:0; padding:10px 10px 0; font:13px/24px Helvetica}
+.m10301BookBox .content h3 span { color:#498ADA}
+.m10301BookBox .content h3 a { float:right; height:24px; background:#555; font:13px/23px Helvetica; color:#FFFFFF; text-align:center; text-decoration:none; margin:3px 0; padding:0 10px; cursor:pointer}
+.m10301BookBox .content .contWrap { height:100%}
+.m10301BookBox .content .contWrap table tr th { position:sticky; position:-webkit-sticky; top:0; left:0; z-index:1}
+.m10301BookBox .content .contWrap table tr td { background-color:#FFF; text-align:left}
+.m10301BookBox .content .contWrap table tr td:first-child { background-color:#e9e9e9; text-align:right}
+.m10301BookBox .content .contWrap table tr td textarea { resize:none}
+.m10301BookBox .content .contWrap table tr td label { margin-right:5px}
+.m10301BookBox .content .contWrap table tr td label input[type=checkbox] { position:relative; top:3px}
+
+/** 贈品計算浮層 **/
+.m10301GiftBox { width:700px; height:170px}
+.m10301GiftBox .content h3 { margin:0; padding:10px 10px 0; font:13px/24px Helvetica}
+.m10301GiftBox .content h3 span { color:#498ADA}
+.m10301GiftBox .content h3 a { float:right; height:24px; background:#555; font:13px/23px Helvetica; color:#FFFFFF; text-align:center; text-decoration:none; margin:3px 0; padding:0 10px; cursor:pointer}
+.m10301GiftBox .content .contWrap { height:100%}
+.m10301GiftBox .content .contWrap ul { margin:15px 0; padding:0px; display:inline-block; width:100%; list-style: none outside none;}
+.m10301GiftBox .content .contWrap ul li {float:left; margin:0px 20px 5px 0px; }
+.m10301GiftBox .content .contWrap ul li label { font:13px/26px Helvetica; cursor:pointer}
+.m10301GiftBox .content .contWrap ul li label input[type=checkbox] { position:relative; top:3px}
+
+/*********************************************************************  m10304 *********************************************************************/
+.m10301style .content .box .inner table.m10304tb tr th { position:sticky; position:-webkit-sticky; top:0; left:0; z-index:1}
+.m10301style .content .box .inner table.m10304tb tr .copy { display:none}
+.m10304PrintBox { width:820px}
+.m10304PrintBox .content .contWrap { height:calc(100% - 50px)}
+.m10304PrintBox .content .contWrap h3 { border:1px solid #D3D3D3; font:13px/24px Helvetica}
+.m10304PrintBox .content .contWrap h3 p.title { margin:0; padding:0 10px; background-color:#D3D3D3; font:bold 15px/30px Helvetica}
+.m10304PrintBox .content .contWrap h3 label { display:inline-block; position:relative; padding:10px; font:13px/26px Helvetica; cursor:pointer}
+.m10304PrintBox .content .contWrap h3 label input[type=checkbox] { position:relative; top:3px}
+
+.m10304EditCopyBox .content h3 { margin:0; padding:10px; font:13px/24px Helvetica}
+.m10304EditCopyBox .content h3 input[type="text"] { margin:2px 5px 2px 2px; vertical-align: middle}
+.m10304EditCopyBox .content .contWrap { height:calc(100% - 95px)}
+.m10304EditCopyBox .content h3 a { float:right; height:24px; background:#555; font:13px/23px Helvetica; color:#FFFFFF; text-align:center; text-decoration:none; margin:3px 0 3px 5px; padding:0 10px; cursor:pointer}
+
+
+/*********************************************************************  m50202 *********************************************************************/
+.m50202style .content .box .inner { overflow:auto}
+.m50202style .content .box .inner table.m50202tb tr th { position:sticky; position:-webkit-sticky; top:0; left:0; z-index:1}
+.m50202style .content .box .inner table.m50202tb tr td { position:relative}
+.m50202style .content .box .inner table.m50202tb tr td.bgRed { background-color:#FF0000; color:#FFF}
+.m50202style .content .box .inner table.m50202tb tr td i.check { display:inline-block; width:6px; height:12px; border-right:2px solid #FF0000; border-bottom:2px solid #FF0000; transform-oripin:left top; transform:rotate(40deg); content: ""; }
+.m50202style .content .box .inner table.m50202tb tr td span.vip { display:inline-block; margin-left:5px; padding:0 5px; background-color:#000; font:12px/18px Helvetica; color:#FFF}
+
+.m50202style .content .box .column a.more { float:right; position:relative; margin:5px; display:inline-block; width:20px; height:20px; background-color:#000; border-radius:20px; cursor:pointer}
+.m50202style .content .box .column a.more::before { position:absolute; top:8px; left:3px; display:inline-block; width:14px; height:3px; background-color:#FFF; content: ""}
+.m50202style .content .box .column a.more::after { position:absolute; top:3px; left:9px; display:inline-block; width:3px; height:14px; background-color:#FFF; content: ""}
+.m50202style .content .box .column a.more:hover { background-color:#F76D6B}
+.m50202style .content .box .column a.more.selected::after { display:none}
+.m50202style .content .box .column span.stutsAA,
+.m50202style .content .box .column span.stutsBB { position:relative; margin:0 10px; font:13px/22px Helvetica; color:#000}
+.m50202style .content .box .column span.stutsAA::before { position:absolute; left:-5px; top:0; display:inline-block; width:3px; height:16px; background-color:#FF0000; content:""}
+.m50202style .content .box .column span.stutsBB::before { position:absolute; left:-12px; top:3px; display:inline-block; width:10px; height:10px; background-color:#FFF; content:""}
+.m50202style .content .box .column span.stutsBB .waiting { display:inline-block; margin-left:5px; padding:0 5px; background-color:#498ADA; border-radius:10px; font:12px/20px Helvetica; color:#FFF}
+.m50202style .content .box.left { width:49%}
+.m50202style .content .box.left table { border:1px solid #E9E9E9; cursor:pointer}
+.m50202style .content .box.left table tr td { background-color:#E9E9E9; border-color:#E9E9E9; border:0; text-align:left}
+.m50202style .content .box.left table tr:first-child td:first-child { width:20px; text-align:center}
+.m50202style .content .box.left table tr td span.black { display:inline-block; padding:0 10px; background-color:#000; border-radius:10px; color:#FFF}
+.m50202style .content .box.left table tr td span.blue { display:inline-block; padding:0 10px; background-color:#498ADA; border-radius:10px; color:#FFF}
+.m50202style .content .box.left table.selected,
+.m50202style .content .box.left table.selected tr td { background-color:#FFF; border-color:#000}
+.m50202style .content .box.left table.motion,
+.m50202style .content .box.left table.motion { border-left:3px solid #FF0000}
+
+.m50202style .content .box.right { float:right; width:50%}
+.m50202style .content .box.right .inner ul li,
+.m50202style .content .box.right .inner ul li p { display:block; width:100%; margin:0; color:#000}
+.m50202style .content .box.right .inner .conversation li+li { border-top:1px solid #E9E9E9}
+.m50202style .content .box.right .inner .conversation { max-height:450px; overflow-y:auto}
+.m50202style .content .box.right .inner .conversation ul li { padding:10px 0}
+.m50202style .content .box.right .inner .conversation ul li p.message { position:relative; display:block; margin-top:5px; padding:5px 8px; box-sizing:border-box; min-height:30px; background-color:#FFEDF5; border-radius:5px; box-shadow:0 1px 2px #999; font:13px/20px Helvetica}
+.m50202style .content .box.right .inner .conversation ul li p.message::before { position:absolute; top:-8px; left:15px; display:inline-block; border-style:solid; border-width:5px 8px 5px 0; border-color:transparent #FFEDF5 transparent transparent; transform:rotate(90deg);  content: "";}
+.m50202style .content .box.right .inner .conversation ul li.cs { padding-left:20px; box-sizing:border-box}
+.m50202style .content .box.right .inner .conversation ul li.cs p.message { background-color:#E9E9E9}
+.m50202style .content .box.right .inner .conversation ul li.cs p.message::before { border-color:transparent #E9E9E9 transparent transparent}
+.m50202style .content .box.right .inner .conversation ul li p span { margin-right:10px}
+.m50202style .content .box.right .inner .reply { display:none; margin-top:10px; border-top:1px dashed #6cb6a6}
+.m50202style .content .box.right .inner .reply ul { padding:10px; box-sizing:border-box; background-color:#E9E9E9}
+.m50202style .content .box.right .inner .reply ul li input[type="text"] { width:100%; box-sizing:border-box}
+.m50202style .content .box.right .inner .reply ul li textarea { box-sizing:border-box; width:100%; resize:none}
+.m50202style .content .box.right .inner .reply ul li.buttonArea { margin-top:10px; text-align:center}
+
+/*********************************************************************  m50211 *********************************************************************/
+
+/** 選擇負責人浮層 **/
+.m50211InchargeBox { width:450px; height:700px}
+.m50211InchargeBox .content h3 { margin:0; padding:5px; font:13px/24px Helvetica}
+.m50211InchargeBox .content h3 textarea { width:100%; box-sizing:border-box; vertical-align:top; resize:none}
+.m50211InchargeBox .content h3 a { float:right; height:24px; background-color:#555; font:13px/23px Helvetica; color:#FFFFFF; text-align:center; text-decoration:none; margin-bottom:5px; padding:0 10px; cursor:pointer}
+.m50211InchargeBox .content .contWrap { height:calc(100% - 165px); overflow-y:auto}
+.m50211InchargeBox .content .contWrap table tr th { position:sticky; position:-webkit-sticky; top:0; left:0; z-index:1}
+.m50211InchargeBox .content .contWrap table tr td { background-color:#FFF; text-align:left}
+.m50211InchargeBox .content .contWrap table tr td label { margin-right:5px; cursor:pointer}
+.m50211InchargeBox .content .contWrap table tr td label input[type=checkbox] { position:relative; top:3px}
+.m50211InchargeBox .content .contWrap table tr td .nameList { display:inline-block; width:150px}
+.m50211InchargeBox .content .contWrap table tr td .nameList ul,
+.m50211InchargeBox .content .contWrap table tr td .nameList ul li { margin:0; padding:0; list-style:none}
+
+/*********************************************************************  m50208 *********************************************************************/
+.m50202style .content .box .inner table.m50208tb tr td { background-color:#FFF}
+.m50202style .content .box .inner table.m50208tb tr.total td:first-child { background-color:#000; color:#FFF}
+.m50202style .content .box .inner table.m50208tb tr.total td { position:sticky; position:-webkit-sticky; bottom:0; left:0; background-color:#D3D3D3; z-index:1}
+
+
+
+

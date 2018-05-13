@@ -1,0 +1,28 @@
+spring:
+  config:
+    location: classpath:,classpath:/config/
+
+  profiles:
+    active: "dev"
+
+
+  jpa:
+    show-sql: false #show sql or not
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl #解決預設 column query 為 _
+        #https://github.com/spring-projects/spring-boot/issues/6264
+    properties:
+      hibernate.dialect: org.hibernate.dialect.Oracle10gDialect
+      hibernate.cache.use_second_level_cache: true
+      hibernate.cache.use_query_cache: true
+      javax.persistence.sharedCache.mode: ENABLE_SELECTIVE
+      hibernate.cache.provider_class: org.hibernate.cache.EhCacheProvider
+      hibernate.jdbc.batch_size: 50
+      hibernate.generate_statistics: true
+      hibernate.cache.region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
+
+
+server:
+  port: 8888
+  
