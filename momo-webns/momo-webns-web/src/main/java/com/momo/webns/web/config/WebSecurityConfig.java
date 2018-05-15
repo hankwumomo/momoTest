@@ -1,5 +1,6 @@
 package com.momo.webns.web.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -48,7 +49,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
   protected void configure(HttpSecurity http) throws Exception {
 	  
 
-	  /*
+	  
 	       http
             .authorizeRequests()
                 .antMatchers("/", "/home").permitAll()
@@ -60,20 +61,26 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
             .logout()
                 .permitAll();
-                */
+                
 
 	
 	  
-    http.authorizeRequests().anyRequest().hasAnyRole("ADMIN", "USER")
-    .and()
-    .formLogin()
-    .loginPage("/login")
-    .permitAll()
-    .and()
-    .logout().permitAll().logoutSuccessUrl("/login")
-    .and()
-    .csrf().disable();
+//    http.authorizeRequests().anyRequest().hasAnyRole("ADMIN", "USER")
+//    .and()
+//    .formLogin()
+//    .loginPage("/login")
+//    .permitAll()
+//    .and()
+//    .logout().permitAll().logoutSuccessUrl("/login")
+//    .and()
+//    .csrf().disable();
     
+  }
+  
+  @Autowired
+  public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception{
+      auth.inMemoryAuthentication()
+              .withUser("user").password("password").roles("USER");
   }
   
 }
